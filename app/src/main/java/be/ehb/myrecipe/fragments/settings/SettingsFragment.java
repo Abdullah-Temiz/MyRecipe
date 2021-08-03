@@ -1,4 +1,4 @@
-package be.ehb.myrecipe.fragments;
+package be.ehb.myrecipe.fragments.settings;
 
 import android.os.Bundle;
 

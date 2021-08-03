@@ -1,4 +1,4 @@
-package be.ehb.myrecipe.fragments;
+package be.ehb.myrecipe.fragments.map;
 
 import android.os.Bundle;
 
@@ -10,25 +10,26 @@ import android.view.ViewGroup;
 
 import be.ehb.myrecipe.R;
 
-public class GroceryFragment extends Fragment {
+public class MapFragment extends Fragment {
 
-    public GroceryFragment() {
-
+    public MapFragment() {
+        // Required empty public constructor
     }
 
-    public static GroceryFragment newInstance() {
-        GroceryFragment fragment = new GroceryFragment();
+    public static MapFragment newInstance() {
+        MapFragment fragment = new MapFragment();
         return fragment;
     }
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.fragment_grocery, container, false);
+        return inflater.inflate(R.layout.fragment_map, container, false);
     }
 }

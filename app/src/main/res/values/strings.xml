@@ -2,4 +2,11 @@
     <string name="app_name">MyRecipe</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="str_recipe_name">Recipe Name</string>
+    <string name="str_recipe_ingredients">Ingredients</string>
+    <string name="str_recipe_description">Description</string>
+    <string name="str_btn_save">Save</string>
+    <string name="str_btn_delete">Delete</string>
+    <string name="str_card_iv_recipe">View with image</string>
+    <string name="str_learn_more">More</string>
 </resources>
