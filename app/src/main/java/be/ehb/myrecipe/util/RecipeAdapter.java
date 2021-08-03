@@ -4,6 +4,6 @@ import android.widget.Filterable;
 import androidx.recyclerview.widget.RecyclerView;
 
 
-public class RecipeAdapter  {
+public class RecipeAdapter{
 
 }
