@@ -1,6 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
-<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+<PreferenceScreen
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <PreferenceCategory android:title="Notifications">
+        <CheckBoxPreference
+            android:title="Enable Notifications"
+            android:defaultValue="Disabled"
+            android:key="Enabled"
+            android:summaryOn="Notifications are enabled"
+            android:summaryOff="Notifications are disabled"/>
+    </PreferenceCategory>
+    <PreferenceCategory android:title="Dark Mode">
+        <SwitchPreferenceCompat
+            android:title="Enable Dark Mode "
+            android:defaultValue="Disabled"
+            android:key="Enabled"
+            android:summaryOn="Dark Mode is enabled"
+            android:summaryOff="Dark Mode is disabled"/>
+    </PreferenceCategory>
+    <PreferenceCategory android:title="About">
+        <Preference
+            android:title="Version"
+            android:summary="1.0.0"/>
+    </PreferenceCategory>
 
 
 </PreferenceScreen>
