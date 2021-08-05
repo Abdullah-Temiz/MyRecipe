@@ -2,13 +2,15 @@
 <PreferenceScreen
     xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <PreferenceCategory android:title="Notifications">
+    <PreferenceCategory
+        android:background="#FF9800"
+        android:title="Notifications">
         <CheckBoxPreference
-            android:title="Enable Notifications"
-            android:defaultValue="Disabled"
+            android:defaultValue="false"
             android:key="Enabled"
+            android:summaryOff="Notifications are disabled"
             android:summaryOn="Notifications are enabled"
-            android:summaryOff="Notifications are disabled"/>
+            android:title="Enable Notifications" />
     </PreferenceCategory>
     <PreferenceCategory android:title="Dark Mode">
         <SwitchPreferenceCompat
@@ -18,7 +20,9 @@
             android:summaryOn="Dark Mode is enabled"
             android:summaryOff="Dark Mode is disabled"/>
     </PreferenceCategory>
-    <PreferenceCategory android:title="About">
+    <PreferenceCategory
+        android:title="About"
+        >
         <Preference
             android:title="Version"
             android:summary="1.0.0"/>
