@@ -3,7 +3,6 @@
     package="be.ehb.myrecipe">
 
     <uses-permission android:name="android.permission.INTERNET"/>
-    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
 
     <application
@@ -22,7 +21,7 @@
             </intent-filter>
         </activity>
         <meta-data android:name="com.google.android.geo.API_KEY"
-            android:value="AIzaSyCOZugRgDHFm_57cT8HmIq7Ziy_X657v34"/>
+            android:value="AIzaSyCC2Mh29n4GyPBe9eJFldBX7E5Uqyk3HbM"/>
 
     </application>
 

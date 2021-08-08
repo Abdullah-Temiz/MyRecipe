@@ -15,6 +15,8 @@ import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.MapView;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.model.LatLng;
+import com.google.android.gms.maps.model.Marker;
+import com.google.android.gms.maps.model.MarkerOptions;
 
 import be.ehb.myrecipe.R;
 
@@ -53,18 +55,46 @@ public class MapFragment extends Fragment implements OnMapReadyCallback {
         MyMapView.onDestroy();
     }
 
-    private void mapStartup(){
+    public void mapStartup(){
         LatLng Brussels = new LatLng(50.85045, 4.34878);
-        MyGoogleMap.moveCamera(CameraUpdateFactory.newLatLngZoom(Brussels, 10));
+        MyGoogleMap.moveCamera(CameraUpdateFactory.newLatLngZoom(Brussels, 11));
     }
 
+
+    public void addMarkers(){
+        LatLng ColruytSchaarbeek_pos = new LatLng(50.8670705,4.3693105);
+        LatLng ColruytLaken_pos = new LatLng(50.8721224,4.3388136);
+        LatLng ColruytUkkel_pos = new LatLng(50.7966789,4.3207686);
+        LatLng CarrefourElsene_pos = new LatLng(50.8167648,4.3718187);
+        LatLng CarrefourKoekelberg_pos = new LatLng(50.8720464,4.290127);
+        LatLng AldiWoluweSaintLambert_pos = new LatLng(50.8428423,4.4058428);
+        LatLng AldiSchaarbeek_pos = new LatLng(50.8604597,4.3844432);
+        LatLng LidlAnderlecht_pos = new LatLng(50.8312817,4.3096019);
+        LatLng LidlSchaarbeek_pos = new LatLng(50.852256,4.3413841);
+
+        Marker ColruytSchaarbeek = MyGoogleMap.addMarker(new MarkerOptions().position(ColruytSchaarbeek_pos).title("Colruyt Schaarbeek"));
+        Marker ColruytLaken = MyGoogleMap.addMarker(new MarkerOptions().position(ColruytLaken_pos).title("Colruyt Laken"));
+        Marker ColruytUkkel = MyGoogleMap.addMarker(new MarkerOptions().position(ColruytUkkel_pos).title("Colruyt Ukkel"));
+        Marker CarrefourElsene = MyGoogleMap.addMarker(new MarkerOptions().position(CarrefourElsene_pos).title("Carrefour Elsene"));
+        Marker CarrefourKoekelberg = MyGoogleMap.addMarker(new MarkerOptions().position(CarrefourKoekelberg_pos).title("Carrefour Koekelberg"));
+        Marker AldiWoluweSaintLambert = MyGoogleMap.addMarker(new MarkerOptions().position(AldiWoluweSaintLambert_pos).title("Aldi Woluwe-Saint-Lambert"));
+        Marker AldiSchaarbeek = MyGoogleMap.addMarker(new MarkerOptions().position(AldiSchaarbeek_pos).title("Aldi Schaarbeek"));
+        Marker LidlAnderlecht = MyGoogleMap.addMarker(new MarkerOptions().position(LidlAnderlecht_pos).title("Lidl Anderlecht"));
+        Marker LidlSchaarbeek = MyGoogleMap.addMarker(new MarkerOptions().position(LidlSchaarbeek_pos).title("Lidl Schaarbeek"));
+
+
+    }
 
     @Override
     public void onMapReady(@NonNull GoogleMap googleMap) {
         MyGoogleMap = googleMap;
         mapStartup();
+        addMarkers();
     }
 
-
-
+    @Override
+    public void onLowMemory() {
+        super.onLowMemory();
+        MyMapView.onLowMemory();
+    }
 }
