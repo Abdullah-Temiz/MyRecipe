@@ -8,11 +8,15 @@ import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
+import androidx.preference.EditTextPreference;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
 
 import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.libraries.places.api.Places;
@@ -33,6 +37,7 @@ public class MainActivity extends AppCompatActivity {
     AppBarConfiguration appBarConfiguration;
     NavController navController;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -40,7 +45,7 @@ public class MainActivity extends AppCompatActivity {
 
         // THIS CODE HELPS TO NAVIGATE BETWEEN FRAGMENTS VIA BOTTOM NAVIGATION.
         //  WE ARE DECLARING OUR HOME PAGE AT STARTUP OF THE APPLICATION.
-        BottomNavigationView bottomNavigationView =  findViewById(R.id.nav_bottom);
+        BottomNavigationView bottomNavigationView = findViewById(R.id.nav_bottom);
         bottomNavigationView.setOnNavigationItemSelectedListener(navigationItemSelectedListener);
         getSupportFragmentManager().beginTransaction().replace(R.id.nav_host, new RecipesFragment()).commit();
 
@@ -48,14 +53,9 @@ public class MainActivity extends AppCompatActivity {
         setSupportActionBar(toolbar);
         appBarConfiguration = new AppBarConfiguration.Builder(R.id.recipesFragment, R.id.addRecipeFragment, R.id.mapFragment, R.id.settingsFragment).build();
         navController = Navigation.findNavController(this, R.id.nav_host);
-        NavigationUI.setupActionBarWithNavController(this,navController, appBarConfiguration);
-        NavigationUI.setupWithNavController(bottomNavigationView,navController);
+        NavigationUI.setupActionBarWithNavController(this, navController, appBarConfiguration);
+        NavigationUI.setupWithNavController(bottomNavigationView, navController);
 
-    }
-
-    @Override
-    public boolean onSupportNavigateUp() {
-        return NavigationUI.navigateUp(navController, appBarConfiguration) || super.onSupportNavigateUp();
     }
 
     // THIS METHOD WIL HELP US TO NAVIGATE TO THE SELECTED FRAGMENT BY THE USER (VIA THE MENU OF THE BOTTOM NAVIGATION).
@@ -63,7 +63,7 @@ public class MainActivity extends AppCompatActivity {
         @Override
         public boolean onNavigationItemSelected(@NonNull MenuItem item) {
             Fragment clickedFragment = null;
-            switch (item.getItemId()){
+            switch (item.getItemId()) {
                 case R.id.recipesFragment:
                     clickedFragment = new RecipesFragment();
                     break;
@@ -83,6 +83,12 @@ public class MainActivity extends AppCompatActivity {
     };
 
 
-
-
+    @Override
+    public boolean onSupportNavigateUp() {
+        return NavigationUI.navigateUp(navController, appBarConfiguration) || super.onSupportNavigateUp();
+    }
 }
+
+
+
+

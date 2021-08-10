@@ -11,7 +11,7 @@ import java.util.concurrent.Executors;
 
 @Database(version = 1, entities = {Recipe.class}, exportSchema = false)
 public abstract class RecipeDB extends RoomDatabase {
-
+    public abstract RecipeDAO getRecipeDAO();
     private static RecipeDB instance;
 
     public static final ExecutorService databaseExecutor = Executors.newFixedThreadPool(4);
@@ -24,7 +24,6 @@ public abstract class RecipeDB extends RoomDatabase {
     }
 
 
-    public abstract RecipeDAO getRecipeDAO();
 
 
 

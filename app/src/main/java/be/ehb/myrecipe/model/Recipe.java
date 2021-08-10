@@ -25,8 +25,7 @@ public class Recipe implements Serializable {
     }
 
     @Ignore
-    public Recipe(long id, String recipeName, String recipeIngredients, String recipeDescription, long recipeImage) {
-        Id = id;
+    public Recipe(String recipeName, String recipeIngredients, String recipeDescription) {
         this.recipeName = recipeName;
         this.recipeIngredients = recipeIngredients;
         this.recipeDescription = recipeDescription;

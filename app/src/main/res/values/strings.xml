@@ -9,4 +9,6 @@
     <string name="str_btn_delete">Delete</string>
     <string name="str_card_iv_recipe">View with image</string>
     <string name="str_learn_more">More</string>
+    <string name="str_more_markets_btn">More Markets</string>
+    <string name="str_delete_recipe">Delete</string>
 </resources>
