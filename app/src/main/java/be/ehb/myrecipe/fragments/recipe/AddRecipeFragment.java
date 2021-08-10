@@ -4,6 +4,7 @@ import android.content.Context;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentActivity;
 import androidx.lifecycle.ViewModelProvider;
@@ -30,21 +31,13 @@ public class AddRecipeFragment extends Fragment {
     private FragmentActivity fragmentActivity;
     Button btnSaveRecipe;
 
-    public AddRecipeFragment() {
-    }
-
-    public static AddRecipeFragment newInstance() {
-        AddRecipeFragment fragment = new AddRecipeFragment();
-        Bundle args = new Bundle();
-        fragment.setArguments(args);
-        return fragment;
-    }
 
     @Override
     public void onAttach(@NonNull Context context) {
         super.onAttach(context);
         fragmentActivity = (FragmentActivity) context;
     }
+
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -84,5 +77,6 @@ public class AddRecipeFragment extends Fragment {
 
         return view;
     }
+
 
 }

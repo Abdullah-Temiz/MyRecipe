@@ -4,6 +4,7 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentTransaction;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 import androidx.navigation.ui.AppBarConfiguration;
@@ -47,7 +48,7 @@ public class MainActivity extends AppCompatActivity {
         //  WE ARE DECLARING OUR HOME PAGE AT STARTUP OF THE APPLICATION.
         BottomNavigationView bottomNavigationView = findViewById(R.id.nav_bottom);
         bottomNavigationView.setOnNavigationItemSelectedListener(navigationItemSelectedListener);
-        getSupportFragmentManager().beginTransaction().replace(R.id.nav_host, new RecipesFragment()).commit();
+        //getSupportFragmentManager().beginTransaction().replace(R.id.nav_host_fragment_container, RecipesFragment.newInstance()).commit();
 
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
@@ -57,6 +58,7 @@ public class MainActivity extends AppCompatActivity {
         NavigationUI.setupWithNavController(bottomNavigationView, navController);
 
     }
+
 
     // THIS METHOD WIL HELP US TO NAVIGATE TO THE SELECTED FRAGMENT BY THE USER (VIA THE MENU OF THE BOTTOM NAVIGATION).
     private BottomNavigationView.OnNavigationItemSelectedListener navigationItemSelectedListener = new BottomNavigationView.OnNavigationItemSelectedListener() {
@@ -77,15 +79,14 @@ public class MainActivity extends AppCompatActivity {
                     break;
             }
 
-            getSupportFragmentManager().beginTransaction().replace(R.id.nav_host, clickedFragment).commit();
+            getSupportFragmentManager().beginTransaction().replace(R.id.nav_host_fragment_container, clickedFragment).commit();
             return true;
         }
     };
 
-
     @Override
     public boolean onSupportNavigateUp() {
-        return NavigationUI.navigateUp(navController, appBarConfiguration) || super.onSupportNavigateUp();
+        return super.onSupportNavigateUp();
     }
 }
 
