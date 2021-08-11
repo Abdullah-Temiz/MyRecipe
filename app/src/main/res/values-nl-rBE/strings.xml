@@ -13,4 +13,7 @@
     <string name="str_nav_recipes">Recepten</string>
     <string name="str_nav_nearby_markets">Nabijgelegen markten</string>
     <string name="str_nav_settings">Instellingen</string>
+    <string name="str_french">Frans</string>
+    <string name="str_english">Engels</string>
+    <string name="str_dutch">Nederlands</string>
 </resources>

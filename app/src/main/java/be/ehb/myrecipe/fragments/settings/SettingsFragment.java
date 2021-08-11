@@ -33,7 +33,6 @@ public class SettingsFragment extends PreferenceFragmentCompat {
     public void onCreatePreferences(Bundle savedInstanceState, String rootKey) {
         setPreferencesFromResource(R.xml.settings, rootKey);
         enableDarkMode();
-
     }
 
     public void enablePreference(){
@@ -42,7 +41,6 @@ public class SettingsFragment extends PreferenceFragmentCompat {
         checkBoxPreference.setOnPreferenceChangeListener(new Preference.OnPreferenceChangeListener() {
             @Override
             public boolean onPreferenceChange(Preference preference, Object object) {
-
                 boolean enabled = (boolean) object;
                 if(enabled){
                     if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O){
@@ -50,7 +48,6 @@ public class SettingsFragment extends PreferenceFragmentCompat {
                         NotificationManager notificationManager = getActivity().getSystemService(NotificationManager.class);
                         notificationManager.createNotificationChannel(notificationChannel);
                     }
-
                     NotificationCompat.Builder notificationBuilder = new NotificationCompat.Builder(getActivity(), "My Recipe Notification")
                             .setSmallIcon(R.drawable.ic_notification)
                             .setContentTitle("My Recipe - New Message")
@@ -61,12 +58,11 @@ public class SettingsFragment extends PreferenceFragmentCompat {
                     managerCompat.notify(1,notificationBuilder.build());
                 }
                 return true;
-
             }
         });
-
     }
     public void enableDarkMode(){
+
         SwitchPreferenceCompat switchPreferenceCompat = (SwitchPreferenceCompat)findPreference("CheckDark");
         switchPreferenceCompat.setOnPreferenceChangeListener(new Preference.OnPreferenceChangeListener() {
             @Override

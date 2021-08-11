@@ -8,6 +8,7 @@ import androidx.core.app.NotificationManagerCompat;
 import androidx.preference.CheckBoxPreference;
 import androidx.preference.Preference;
 import androidx.preference.PreferenceManager;
+import androidx.preference.SwitchPreferenceCompat;
 
 import android.app.NotificationChannel;
 import android.app.NotificationManager;
@@ -27,17 +28,12 @@ public class SettingsActivity extends AppCompatActivity {
                 .beginTransaction()
                 .replace(R.id.settingsFragment, new SettingsFragment())
                 .commit();
-
         if (AppCompatDelegate.getDefaultNightMode() == AppCompatDelegate.MODE_NIGHT_YES) {
             setTheme(R.style.Theme_MyRecipe_Dark);
         } else {
             setTheme(R.style.Theme_MyRecipe);
         }
-
     }
-
-
-
 
 }
 
