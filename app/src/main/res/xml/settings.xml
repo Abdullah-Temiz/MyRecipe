@@ -22,6 +22,9 @@
             android:summaryOn="Dark Mode is enabled"
             android:summaryOff="Dark Mode is disabled"/>
     </PreferenceCategory>
+    <PreferenceCategory android:title="App Language">
+
+    </PreferenceCategory>
     <PreferenceCategory
         android:title="About"
         >

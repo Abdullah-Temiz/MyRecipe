@@ -91,6 +91,9 @@ public class MapFragment extends Fragment implements OnMapReadyCallback {
         MyGoogleMap = googleMap;
         mapStartup();
         addMarkers();
+        MyGoogleMap.getUiSettings().setMapToolbarEnabled(true);
+        MyGoogleMap.getUiSettings().setZoomControlsEnabled(true);
+        MyGoogleMap.getUiSettings().setMyLocationButtonEnabled(true);
     }
 
     @Override
