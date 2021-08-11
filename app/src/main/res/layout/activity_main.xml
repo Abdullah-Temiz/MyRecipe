@@ -15,8 +15,8 @@
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="?attr/navtool_color"
-            app:popupTheme="@style/Widget.AppCompat.PopupMenu" />
+            android:background="?android:attr/windowBackground"
+            />
     </com.google.android.material.appbar.AppBarLayout>
 
     <include
