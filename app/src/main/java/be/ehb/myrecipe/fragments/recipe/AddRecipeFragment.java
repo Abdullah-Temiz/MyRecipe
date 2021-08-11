@@ -70,6 +70,7 @@ public class AddRecipeFragment extends Fragment {
                     selected.setRecipeName(etRecipeName.getText().toString());
                     selected.setRecipeIngredients(etRecipeIngredients.getText().toString());
                     selected.setRecipeDescription(etRecipeDescription.getText().toString());
+                    viewModel.updateRecipe(selected);
                 }
                 Navigation.findNavController(v).navigate(R.id.action_addRecipeFragment_to_recipesFragment);
             }

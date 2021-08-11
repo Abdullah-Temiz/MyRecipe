@@ -3,7 +3,6 @@
     <style name="Theme.MyRecipe" parent="Theme.MaterialComponents.DayNight.NoActionBar">
         <!-- Primary brand color. -->
         <item name="colorPrimary">@color/blue</item>
-        <item name="colorPrimaryVariant">@color/blue</item>
         <item name="colorOnPrimary">@color/white</item>
         <!-- Secondary brand color. -->
         <item name="colorSecondary">@color/yellow</item>
@@ -12,6 +11,9 @@
         <!-- Status bar color. -->
         <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
+        <item name="background_color">@color/white</item>
+        <item name="text_color">@color/black</item>
+        <item name="navtool_color">@color/yellow</item>
 
     </style>
 </resources>

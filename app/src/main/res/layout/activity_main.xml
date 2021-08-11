@@ -9,13 +9,13 @@
     <com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:theme="@style/ThemeOverlay.AppCompat">
+        android:theme="@style/Theme.MyRecipe">
 
         <androidx.appcompat.widget.Toolbar
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
-            android:layout_height="?attr/actionBarSize"
-            android:background="@color/yellow"
+            android:layout_height="wrap_content"
+            android:background="?attr/navtool_color"
             app:popupTheme="@style/Widget.AppCompat.PopupMenu" />
     </com.google.android.material.appbar.AppBarLayout>
 
@@ -23,7 +23,6 @@
         layout="@layout/activity_content"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="#FFFFFF"
         app:layout_behavior="@string/appbar_scrolling_view_behavior" />
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

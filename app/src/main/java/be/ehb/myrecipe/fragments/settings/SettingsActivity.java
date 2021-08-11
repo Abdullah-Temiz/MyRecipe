@@ -2,6 +2,7 @@ package be.ehb.myrecipe.fragments.settings;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatDelegate;
 import androidx.core.app.NotificationCompat;
 import androidx.core.app.NotificationManagerCompat;
 import androidx.preference.CheckBoxPreference;
@@ -27,8 +28,15 @@ public class SettingsActivity extends AppCompatActivity {
                 .replace(R.id.settingsFragment, new SettingsFragment())
                 .commit();
 
+        if (AppCompatDelegate.getDefaultNightMode() == AppCompatDelegate.MODE_NIGHT_YES) {
+            setTheme(R.style.Theme_MyRecipe_Dark);
+        } else {
+            setTheme(R.style.Theme_MyRecipe);
+        }
 
     }
+
+
 
 
 }
