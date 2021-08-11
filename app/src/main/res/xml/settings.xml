@@ -8,7 +8,7 @@
         <CheckBoxPreference
             android:id="@+id/checkbox_notification"
             android:defaultValue="false"
-            android:key="Enabled"
+            android:key="CheckNotif"
             android:summaryOff="Notifications are disabled"
             android:summaryOn="Notifications are enabled"
             android:title="Enable Notifications" />
@@ -18,7 +18,7 @@
             android:id="@+id/switchbox_darkmode"
             android:title="Enable Dark Mode "
             android:defaultValue="Disabled"
-            android:key="Enabled"
+            android:key="CheckDark"
             android:summaryOn="Dark Mode is enabled"
             android:summaryOff="Dark Mode is disabled"/>
     </PreferenceCategory>

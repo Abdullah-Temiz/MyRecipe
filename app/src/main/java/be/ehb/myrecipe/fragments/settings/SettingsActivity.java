@@ -1,13 +1,20 @@
 package be.ehb.myrecipe.fragments.settings;
 
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.NotificationCompat;
 import androidx.core.app.NotificationManagerCompat;
+import androidx.preference.CheckBoxPreference;
+import androidx.preference.Preference;
+import androidx.preference.PreferenceManager;
 
 import android.app.NotificationChannel;
 import android.app.NotificationManager;
+import android.content.SharedPreferences;
 import android.os.Build;
 import android.os.Bundle;
+import android.util.Log;
+import android.widget.Toast;
 
 import be.ehb.myrecipe.R;
 
@@ -21,19 +28,8 @@ public class SettingsActivity extends AppCompatActivity {
                 .commit();
 
 
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O){
-            NotificationChannel notificationChannel = new NotificationChannel("My Recipe Notification","My Recipe Notification", NotificationManager.IMPORTANCE_DEFAULT);
-            NotificationManager notificationManager = getSystemService(NotificationManager.class);
-            notificationManager.createNotificationChannel(notificationChannel);
-        }
+    }
 
-        NotificationCompat.Builder notificationBuilder = new NotificationCompat.Builder(this, "My Recipe Notification")
-                .setSmallIcon(R.drawable.ic_launcher_foreground)
-                .setContentTitle("My Recipe - New Message")
-                .setContentText("Notifications are enabled for My Recipe App.")
-                .setPriority(NotificationCompat.PRIORITY_DEFAULT);
 
-        NotificationManagerCompat managerCompat = NotificationManagerCompat.from(this);
-        managerCompat.notify(1,notificationBuilder.build());
-    }}
+}
 

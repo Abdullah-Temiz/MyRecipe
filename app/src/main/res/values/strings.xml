@@ -1,8 +1,6 @@
 <resources>
     <string name="app_name">MyRecipe</string>
     <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="str_recipe_name">Recipe Name</string>
     <string name="str_recipe_ingredients">Ingredients</string>
     <string name="str_recipe_description">Description</string>
     <string name="str_btn_save">Save</string>
@@ -11,4 +9,8 @@
     <string name="str_learn_more">More</string>
     <string name="str_more_markets_btn">More Markets</string>
     <string name="str_delete_recipe">Delete</string>
+    <string name="str_recipe_name">Recipe Name</string>
+    <string name="str_nav_recipes">Recipes</string>
+    <string name="str_nav_nearby_markets">Nearby Markets</string>
+    <string name="str_nav_settings">Settings</string>
 </resources>
