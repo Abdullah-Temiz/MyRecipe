@@ -6,7 +6,7 @@
     <string name="str_btn_save">Save</string>
     <string name="str_btn_delete">Delete</string>
     <string name="str_card_iv_recipe">View with image</string>
-    <string name="str_learn_more">More</string>
+    <string name="str_learn_more">Learn More</string>
     <string name="str_more_markets_btn">More Markets</string>
     <string name="str_delete_recipe">Delete</string>
     <string name="str_recipe_name">Recipe Name</string>
@@ -16,4 +16,6 @@
     <string name="str_french">French</string>
     <string name="str_english" >English</string>
     <string name="str_dutch" >Dutch</string>
+    <string name="str_load_image" >Choose</string>
+    <string name="str_load_imageview">Image</string>
 </resources>

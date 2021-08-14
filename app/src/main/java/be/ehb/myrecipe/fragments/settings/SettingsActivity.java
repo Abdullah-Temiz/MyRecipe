@@ -22,18 +22,15 @@ import be.ehb.myrecipe.R;
 
 public class SettingsActivity extends AppCompatActivity {
 
+    SharedPreferences sharedPreferences;
+    SharedPreferences.Editor editor;
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         getSupportFragmentManager()
                 .beginTransaction()
                 .replace(R.id.settingsFragment, new SettingsFragment())
                 .commit();
-        if (AppCompatDelegate.getDefaultNightMode() == AppCompatDelegate.MODE_NIGHT_YES) {
-            setTheme(R.style.Theme_MyRecipe_Dark);
-        } else {
-            setTheme(R.style.Theme_MyRecipe);
-        }
-    }
 
+    }
 }
 

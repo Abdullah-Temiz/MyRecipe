@@ -4,5 +4,6 @@
         <attr name="background_color" format="color"/>
         <attr name="text_color" format="color"/>
         <attr name="navtool_color" format="color"/>
+        <attr name="load_imageview" format="color"/>
     </declare-styleable>
 </resources>

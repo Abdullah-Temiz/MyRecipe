@@ -16,4 +16,5 @@
     <string name="str_french">Français</string>
     <string name="str_english">Anglais</string>
     <string name="str_dutch">Néerlandais</string>
+    <string name="str_load_image">Choisir</string>
 </resources>

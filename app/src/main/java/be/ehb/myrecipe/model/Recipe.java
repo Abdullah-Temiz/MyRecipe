@@ -1,5 +1,7 @@
 package be.ehb.myrecipe.model;
 
+import android.net.Uri;
+
 import androidx.room.ColumnInfo;
 import androidx.room.Entity;
 import androidx.room.Ignore;
@@ -19,13 +21,13 @@ public class Recipe implements Serializable {
     @ColumnInfo(name = "recipe_description")
     private String recipeDescription;
     @ColumnInfo(name = "recipe_image")
-    private long recipeImage;
+    private String recipeImage;
 
     public Recipe() {
     }
 
     @Ignore
-    public Recipe(String recipeName, String recipeIngredients, String recipeDescription) {
+    public Recipe(String recipeName, String recipeIngredients, String recipeDescription, String recipeImage) {
         this.recipeName = recipeName;
         this.recipeIngredients = recipeIngredients;
         this.recipeDescription = recipeDescription;
@@ -64,11 +66,11 @@ public class Recipe implements Serializable {
         this.recipeDescription = recipeDescription;
     }
 
-    public long getRecipeImage() {
+    public String getRecipeImage() {
         return recipeImage;
     }
 
-    public void setRecipeImage(long recipeImage) {
+    public void setRecipeImage(String recipeImage) {
         this.recipeImage = recipeImage;
     }
 }

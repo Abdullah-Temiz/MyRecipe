@@ -52,8 +52,6 @@ public class RecipesFragment extends Fragment {
         addRecipe.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
-                addRecipe.hide();
                 Navigation.findNavController(v).navigate(R.id.action_to_new_recipe_fragment);
             }
         });
@@ -73,9 +71,6 @@ public class RecipesFragment extends Fragment {
                 recipeAdapter.notifyDataSetChanged();
             }
         });
-
-
-
         return RecipeView;
     }
 }

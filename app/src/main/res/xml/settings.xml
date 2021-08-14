@@ -16,11 +16,11 @@
     <PreferenceCategory android:title="Dark Mode">
         <SwitchPreferenceCompat
             android:id="@+id/switchbox_darkmode"
-            android:title="Enable Dark Mode "
-            android:defaultValue="Disabled"
+            android:defaultValue="false"
             android:key="CheckDark"
+            android:summaryOff="Dark Mode is disabled"
             android:summaryOn="Dark Mode is enabled"
-            android:summaryOff="Dark Mode is disabled"/>
+            android:title="Enable Dark Mode " />
     </PreferenceCategory>
 
     <PreferenceCategory

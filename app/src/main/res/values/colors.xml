@@ -13,5 +13,7 @@
     <color name="green">#02731D</color>
     <color name="appText">#FF000000</color>
     <color name="appBackground">#FFFFFF</color>
+    <color name="LoadImageViewDay">#D9D9D9</color>
+    <color name="LoadImageViewNight">#232323</color>
 
 </resources>
