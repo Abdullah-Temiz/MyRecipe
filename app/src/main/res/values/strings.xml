@@ -18,4 +18,5 @@
     <string name="str_dutch" >Dutch</string>
     <string name="str_load_image" >Choose</string>
     <string name="str_load_imageview">Image</string>
+    <string name="stri_search_menu">Search</string>
 </resources>

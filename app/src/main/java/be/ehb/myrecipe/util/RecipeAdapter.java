@@ -7,6 +7,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.Filter;
+import android.widget.Filterable;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -20,6 +22,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.squareup.picasso.Picasso;
 
+import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -30,7 +33,7 @@ import be.ehb.myrecipe.model.RecipeViewModel;
 import static java.security.AccessController.getContext;
 
 
-public class RecipeAdapter extends RecyclerView.Adapter<RecipeAdapter.RecipeViewHolder>{
+public class RecipeAdapter extends RecyclerView.Adapter<RecipeAdapter.RecipeViewHolder> implements Filterable {
 
     private List<Recipe> allRecipes;
     private List<Recipe> selectedRecipes;
@@ -103,6 +106,40 @@ public class RecipeAdapter extends RecyclerView.Adapter<RecipeAdapter.RecipeView
     }
 
     @Override
+    public Filter getFilter() {
+        return filter;
+    }
+
+    Filter filter = new Filter() {
+        @Override
+        protected FilterResults performFiltering(CharSequence charSequence) {
+            ArrayList<Recipe> searchList = new ArrayList<>();
+
+            if(charSequence == null || charSequence.length() == 0){
+                searchList.addAll(allRecipes);
+            }else{
+                for(Recipe item : allRecipes){
+                    if(item.getRecipeName().toLowerCase().contains(charSequence.toString().toLowerCase())){
+                         searchList.add(item);
+                    }
+                }
+            }
+
+            FilterResults filterResults = new FilterResults();
+            filterResults.values = searchList;
+            return filterResults;
+        }
+
+        @Override
+        protected void publishResults(CharSequence charSequence, FilterResults filterResults) {
+           selectedRecipes.clear();
+           selectedRecipes.addAll((ArrayList)filterResults.values);
+           notifyDataSetChanged();
+
+        }
+    };
+
+    @Override
     public int getItemCount() {
         return selectedRecipes.size();
     }
@@ -114,6 +151,8 @@ public class RecipeAdapter extends RecyclerView.Adapter<RecipeAdapter.RecipeView
         allRecipes.addAll(recipes);
 
     }
+
+
 
 
 
