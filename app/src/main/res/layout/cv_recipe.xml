@@ -38,11 +38,11 @@
             android:layout_marginTop="28dp"
             android:fontFamily="sans-serif-black"
             android:textAllCaps="true"
-            android:textSize="30sp"
+            android:textSize="29sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/iv_card_recipe"
             app:layout_constraintTop_toTopOf="parent"
-            tools:text="APPELTAART" />
+            tools:text="CHICKEN (KFC)" />
 
 
         <Button
