@@ -11,7 +11,7 @@
     android:layout_marginEnd="10dp"
     android:layout_marginRight="10dp"
     app:cardBackgroundColor="#737373"
-    app:cardCornerRadius="15dp"
+    app:cardCornerRadius="5dp"
     app:cardElevation="5dp">
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -20,12 +20,8 @@
 
         <ImageView
             android:id="@+id/iv_card_recipe"
-            android:layout_width="174dp"
-            android:layout_height="119dp"
-            android:layout_marginStart="16dp"
-            android:layout_marginLeft="16dp"
-            android:layout_marginTop="16dp"
-            android:layout_marginBottom="16dp"
+            android:layout_width="175dp"
+            android:layout_height="124dp"
             android:adjustViewBounds="true"
             android:contentDescription="@string/str_card_iv_recipe"
             android:scaleType="centerCrop"
@@ -37,48 +33,40 @@
 
         <TextView
             android:id="@+id/tv_recipe_name"
-            android:layout_width="121dp"
-            android:layout_height="40dp"
-            android:layout_marginStart="5dp"
-            android:layout_marginLeft="5dp"
-            android:layout_marginTop="16dp"
-            android:layout_marginBottom="40dp"
+            android:layout_width="208dp"
+            android:layout_height="37dp"
+            android:layout_marginTop="28dp"
             android:fontFamily="sans-serif-black"
             android:textAllCaps="true"
             android:textSize="30sp"
-            app:layout_constraintBottom_toTopOf="@+id/btn_recipe_detail"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/iv_card_recipe"
             app:layout_constraintTop_toTopOf="parent"
-            tools:text="Title" />
+            tools:text="APPELTAART" />
+
 
         <Button
             android:id="@+id/btn_recipe_detail"
             android:layout_width="170dp"
             android:layout_height="51dp"
-            android:layout_marginStart="5dp"
-            android:layout_marginLeft="5dp"
-            android:layout_marginTop="28dp"
-            android:layout_marginEnd="5dp"
-            android:layout_marginRight="5dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="40dp"
+            android:layout_marginRight="40dp"
             android:text="@string/str_learn_more"
             app:backgroundTint="#007A15"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.106"
-            app:layout_constraintStart_toEndOf="@+id/iv_card_recipe"
             app:layout_constraintTop_toBottomOf="@+id/tv_recipe_name" />
 
-        <Button
+        <ImageButton
             android:id="@+id/btn_delete"
-            android:layout_width="50dp"
-            android:layout_height="40dp"
-            android:layout_marginTop="16dp"
-            android:background="@android:color/transparent"
-            android:clickable="false"
-            app:icon="@drawable/ic_cancel"
-            app:iconTint="#C30202"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_marginTop="2dp"
+            android:layout_marginEnd="4dp"
+            android:layout_marginRight="4dp"
+            android:background="@drawable/ic_cancel"
+            app:layout_constraintBottom_toTopOf="@+id/tv_recipe_name"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.384"
-            app:layout_constraintStart_toEndOf="@+id/tv_recipe_name"
             app:layout_constraintTop_toTopOf="parent" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.cardview.widget.CardView>

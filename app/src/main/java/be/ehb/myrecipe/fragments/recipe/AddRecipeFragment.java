@@ -92,6 +92,7 @@ public class AddRecipeFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 RecipeViewModel viewModel = new ViewModelProvider(fragmentActivity).get(RecipeViewModel.class);
+                try{
                 if(etRecipeName.getText().toString().matches("") || etRecipeIngredients.getText().toString().matches("") || etRecipeDescription.getText().toString().matches("") || loadImageView.getDrawable() == null) {
                     Toast.makeText(getContext(), "Please fill in all fields !", Toast.LENGTH_SHORT).show();
                 }else {
@@ -107,6 +108,9 @@ public class AddRecipeFragment extends Fragment {
                         viewModel.updateRecipe(selected);
                     }
                     Navigation.findNavController(v).navigate(R.id.action_addRecipeFragment_to_recipesFragment);
+                }
+                }catch (Exception e){
+                    Toast.makeText(getContext(),"ERROR: " + e, Toast.LENGTH_SHORT).show();
                 }
             }
         });

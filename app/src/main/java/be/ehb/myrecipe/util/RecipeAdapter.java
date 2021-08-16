@@ -9,6 +9,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.Filter;
 import android.widget.Filterable;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -43,7 +44,8 @@ public class RecipeAdapter extends RecyclerView.Adapter<RecipeAdapter.RecipeView
         final TextView r_name;
         final ImageView imageView;
         final CardView card;
-        final Button btnDetails, btnDelete;
+        final Button btnDetails;
+        final ImageButton btnDelete;
 
             RecipeViewHolder(@NonNull View itemView) {
             super(itemView);
